@@ -1,0 +1,137 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2980b9;
+    --background-color: #f4f6f7;
+    --card-background: #ffffff;
+    --text-color: #2c3e50;
+    --transition-speed: 0.3s;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: 'Arial', sans-serif;
+}
+
+.chart-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.chart-container {
+    background-color: var(--card-background);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    width: calc(50% - 20px);
+    min-width: 300px;
+    transition: all var(--transition-speed) ease;
+    position: relative;
+    overflow: hidden;
+    perspective: 1000px;
+}
+
+
+.chart-container h3 {
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+    position: relative;
+    transition: color var(--transition-speed) ease;
+}
+
+
+.chart-container h3::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary-color);
+    transform: translateX(-50%) scaleX(0);
+    transition: transform var(--transition-speed) ease;
+}
+
+.chart-container:hover h3::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+/* Chart Hover Effects */
+canvas {
+    transition: all var(--transition-speed) ease;
+}
+
+.chart-container:hover canvas {
+    filter: brightness(1.05);
+}
+
+/* Chart Entrance Animations */
+@keyframes chartEntrance {
+    from {
+        opacity: 0;
+        transform: 
+            translateY(50px) 
+            scale(0.9) 
+            rotate3d(1, 0, 0, -10deg);
+    }
+    to {
+        opacity: 1;
+        transform: 
+            translateY(0) 
+            scale(1) 
+            rotate3d(1, 0, 0, 0);
+    }
+}
+
+#recentOrdersChart,
+#bookingsByStatusChart {
+    animation: chartEntrance 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+#recentOrdersChart {
+    animation-delay: 0.2s;
+}
+
+#bookingsByStatusChart {
+    animation-delay: 0.4s;
+}
+
+/* Tooltip Customization */
+.chartjs-tooltip {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    color: white !important;
+    border-radius: 8px !important;
+    padding: 10px !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .chart-container {
+        width: 100%;
+    }
+}
+
+/* Subtle Background Animation */
+.chart-container::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        0deg, 
+        transparent, 
+        rgba(52, 152, 219, 0.05), 
+        transparent
+    );
+    transform-origin: bottom right;
+    transition: all var(--transition-speed) ease;
+    opacity: 0;
+}

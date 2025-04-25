@@ -1,0 +1,204 @@
+  /* Modal Background */
+  .modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Black w/opacity */
+    padding-top: 60px;
+    transition: opacity 0.3s ease;
+    /* Smooth fade-in effect */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    /* You can adjust this width as necessary */
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal Header */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* Close Button */
+.close-btn {
+    font-size: 2rem;
+    color: #888;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+/* Close Button Hover */
+.close-btn:hover {
+    color: #000;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+/* Modal Footer */
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding-top: 10px;
+}
+
+.modal-footer .btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Primary Button */
+.modal-footer .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.modal-footer .btn-primary:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Secondary Button */
+.modal-footer .btn-secondary {
+    background-color: #ccc;
+    color: #333;
+}
+
+.modal-footer .btn-secondary:hover {
+    background-color: #999;
+}
+
+/* Cancel Button Hover */
+#cancelModal:hover {
+    background-color: #f8f8f8;
+}
+
+/* Modal Transition */
+.modal.fade-in {
+    display: block;
+    opacity: 1;
+}
+
+/* Small Device Handling */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        margin-top: 20px;
+    }
+
+    .modal-header h2 {
+        font-size: 1.2rem;
+    }
+
+    .form-group label {
+        font-size: 0.9rem;
+    }
+
+    .form-group input,
+    .form-group select {
+        font-size: 0.9rem;
+        padding: 7px;
+    }
+
+    .modal-footer .btn {
+        font-size: 0.9rem;
+    }
+}
+/* Base button styles */
+.view-details-btn {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 8px;
+    border: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect */
+.view-details-btn:hover {
+    background-color: #0056b3;
+    color: #ffffff;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Focus effect */
+.view-details-btn:focus {
+    outline: 2px solid #0056b3;
+    outline-offset: 2px;
+}
+
+/* Active state */
+.view-details-btn:active {
+    background-color: #004085;
+    transform: translateY(1px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .view-details-btn {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+}

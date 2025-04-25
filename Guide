@@ -1,0 +1,6 @@
+install xampp
+paste the project folder in the htdocs of xampp server folder
+import the database by creating the new database named the database project and then import the database
+after that start apache and mysql 
+and put the link localhost/Project
+Thanks For Visiting the site

@@ -1,0 +1,142 @@
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 16px;
+  color: #555;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="decimal"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="decimal"]:focus {
+  border-color: rgb(8, 28, 128);
+  outline: none;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: rgb(8, 28, 128);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  right: 25px;
+  top: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.cancel-btn:hover {
+  background-color: #d32f2f;
+}
+
+.delete-anchor {
+  display: inline-block;
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: rgb(182, 8, 8);
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s, border-color 0.3s;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.stock-anchor {
+  display: inline-block;
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: rgb(8, 139, 182);
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s, border-color 0.3s;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.delete-anchor:hover {
+  background-color: rgb(182, 8, 8);
+  text-decoration: none;
+}
+h2 {
+  text-align: center;
+}
+a.btn{
+    float: right;
+    padding: 10px 20px;
+    background-color: rgb(19, 158, 12);
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+}

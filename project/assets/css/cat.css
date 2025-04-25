@@ -1,0 +1,37 @@
+.category-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.category-table th,
+.category-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.category-table thead th {
+    background-color: rgb(5, 25, 90);
+    color: white;
+}
+
+td button {
+    background-color: rgb(6, 27, 120);
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+}
+
+td button:hover {
+    background-color: rgb(6, 27, 120);
+}
+
+.btn2 {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}

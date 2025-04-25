@@ -1,0 +1,219 @@
+:root {
+    --primary: #4f46e5;
+    --primary-dark: #4338ca;
+    --primary-light: #818cf8;
+    --success: #10b981;
+    --danger: #ef4444;
+    --surface-0: #ffffff;
+    --surface-50: #fafafa;
+    --surface-100: #f4f4f5;
+    --text-primary: #18181b;
+    --text-secondary: #3f3f46;
+    --text-light: #71717a;
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --radius: 0.5rem;
+    --radius-lg: 1rem;
+    --radius-full: 9999px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ddd6fe 0%, #c7d2fe 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--surface-0);
+    border-radius: var(--radius-lg);
+    width: min(1200px, 95%);
+    box-shadow: var(--shadow-lg);
+    animation: container-enter 0.5s ease-out;
+}
+
+@keyframes container-enter {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+ .image-container {
+    flex: 1;
+    padding: 3rem;
+    color: white;
+    text-align: center;
+    background: linear-gradient(135deg, #191970 0%, #4f46e5 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.image-container h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    animation: slide-up 0.5s ease-out 0.2s both;
+}
+
+.image-container p {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+    animation: slide-up 0.5s ease-out 0.3s both;
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: slide-up 0.5s ease-out 0.4s both;
+}
+
+@keyframes slide-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.register-container {
+    flex: 1;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: slide-up 0.5s ease-out 0.5s both;
+}
+
+.register-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.register-header h2 {
+    font-size: 2rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.register-header p {
+    color: var(--text-secondary);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    color: var(--text-primary);
+    background: var(--surface-50);
+    border: 2px solid var(--surface-100);
+    border-radius: var(--radius);
+    transition: all 0.3s ease;
+}
+
+.input-wrapper input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.error-message {
+    text-align: center;
+    color: var(--danger);
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background: rgba(239, 68, 68, 0.1);
+    border-radius: var(--radius);
+    animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+@keyframes shake {
+    10%, 90% {
+        transform: translateX(-1px);
+    }
+    20%, 80% {
+        transform: translateX(2px);
+    }
+    30%, 50%, 70% {
+        transform: translateX(-4px);
+    }
+    40%, 60% {
+        transform: translateX(4px);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .image-container {
+        flex: 1 1 100%;
+        padding: 2rem;
+    }
+
+    .register-container {
+        flex: 1 1 100%;
+        padding: 2rem;
+    }
+
+    .image-container h1 {
+        font-size: 2rem;
+    }
+
+    .register-container {
+        padding: 1.5rem;
+    }
+}

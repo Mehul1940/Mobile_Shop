@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Shop premium smartphones and accessories with Nilkanth Mobiles. Explore top brands like Redmi and more!"
+    />
+    <title>Nilkanth Mobiles - Shop</title>
+    <link
+      rel="stylesheet"
+      href="https:/pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
+    <link rel="stylesheet" href="/project/customer/style/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <style>
+      /* Grid styling for product section */
+      #product1 .pro-container {
+        display: flex;
+        overflow-x: auto;
+        /* Enable horizontal scrolling */
+        gap: 20px;
+        /* Spacing between items */
+        padding: 20px;
+        scroll-behavior: smooth;
+        /* Smooth scrolling */
+      }
+
+      #product1 .pro-container::-webkit-scrollbar {
+        height: 8px;
+        /* Adjust scrollbar height */
+      }
+
+      #product1 .pro-container::-webkit-scrollbar-thumb {
+        background: #ccc;
+        /* Scrollbar thumb color */
+        border-radius: 10px;
+      }
+
+      #product1 .pro-container::-webkit-scrollbar-thumb:hover {
+        background: #ff5722;
+        /* Thumb hover color */
+      }
+
+      #product1 .pro {
+        text-align: center;
+        background: #f5f5f5;
+        border-radius: 10px;
+        padding: 15px;
+        transition: 0.3s;
+        flex-shrink: 0;
+        /* Prevent shrinking of items */
+        width: 300px;
+        /* Fixed width for items */
+      }
+
+      #product1 .pro:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transform: scale(1.05);
+      }
+
+      #product1 .pro img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        object-fit: cover;
+      }
+
+      /* Improved search input styling */
+      #search-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
+
+      #search-input {
+        width: 100%;
+        padding: 5px 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      #search-button {
+        position: absolute;
+        right: 5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #333;
+      }
+
+      /* Add styles for scroll buttons */
+      .scroll-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #fff;
+        border: none;
+        cursor: pointer;
+        font-size: 24px;
+        z-index: 10;
+      }
+
+      .scroll-left {
+        left: 10px;
+      }
+
+      .scroll-right {
+        right: 10px;
+      }
+      /* Add this style for centering the scroll buttons */
+      #product1 {
+        position: relative;
+      }
+
+      .scroll-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%); /* Center vertically */
+        background-color: rgba(255, 255, 255, 0.7);
+        border: none;
+        cursor: pointer;
+        font-size: 24px;
+        padding: 10px;
+        border-radius: 50%;
+        z-index: 10;
+        transition: 0.3s;
+      }
+
+      .scroll-btn:hover {
+        background-color: #ff5722;
+        transform: translateY(-50%) scale(1.1);
+      }
+
+      .scroll-left {
+        left: 10px;
+      }
+
+      .scroll-right {
+        right: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header Section -->
+    <header id="header">
+      <a href="index.html">
+        <img
+          src="/project/customer/assets/logo/1.png"
+          alt="Nilkanth Mobiles Logo"
+          class="logo"
+        />
+      </a>
+      <div>
+        <div>
+          <ul id="navbar">
+            <li><a class="active" href="index.html">Home</a></li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Categories
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Smartphones</a></li>
+                <li><a class="dropdown-item" href="#">headphones</a></li>
+                <li><a class="dropdown-item" href="#">Earbuds</a></li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li><a class="dropdown-item" href="#">SmartWatches</a></li>
+              </ul>
+            </li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li>
+              <a href="cart.html"><i class="fal fa-shopping-cart"></i> </a>
+            </li>
+            <li id="search-wrapper">
+              <input
+                type="text"
+                id="search-input"
+                placeholder="Search products..."
+              />
+              <button id="search-button"><i class="fas fa-search"></i></button>
+            </li>
+            <li>
+              <a href="profile.html"><i class="fal fa-user"></i></a>
+            </li>
+            <li>
+              <a href="register.html"><i class="fal fa-user-plus"></i></a>
+              <!-- Register Icon -->
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="page-header">
+      <h2>#UpgradeWithNilkanth</h2>
+      <p>Explore Our Wide Range Of Smartphones And Accessories</p>
+    </section>
+
+    <!-- Products Section -->
+    <section id="product1" class="section-p1">
+      <button class="scroll-btn scroll-left">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+
+      <div class="pro-container">
+        <!-- Product Card Template -->
+        <div class="pro" onclick="window.location.href='sproduct.html'">
+          <img
+            src="/project/customer/assets/PRODUCT IMG/BC1.jpg"
+            alt="Redmi K40 Gaming Edition"
+          />
+          <div class="des">
+            <span>Redmi</span>
+            <h5>
+              Redmi K40 Gaming Edition <br />
+              Bruce Lee Special Edition
+            </h5>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>₹17,500</h4>
+          </div>
+          <a href="#">
+            <i class="fas fa-shopping-cart cart"></i>
+          </a>
+        </div>
+        <div class="pro">
+          <img
+            src="/project/customer/assets/PRODUCT IMG/resized_image.jpg"
+            alt="Product 2"
+          />
+          <div class="des">
+            <span>Redmi</span>
+            <h5>
+              Redmi K40 Gaming Edition <br />
+              Bruce Lee Special Edition
+            </h5>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>₹17,500</h4>
+          </div>
+          <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+        </div>
+        <div class="pro">
+          <img
+            src="/project/customer/assets/PRODUCT IMG/WATCHB_resized.jpg"
+            alt="Product 3"
+          />
+          <div class="des">
+            <span>Redmi</span>
+            <h5>
+              Redmi K40 Gaming Edition <br />
+              Bruce Lee Special Edition
+            </h5>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>₹17,500</h4>
+          </div>
+          <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+        </div>
+        <div class="pro">
+          <img
+            src="/project/customer/assets/PRODUCT IMG/WATCHB_resized.jpg"
+            alt="Product 3"
+          />
+          <div class="des">
+            <span>Redmi</span>
+            <h5>
+              Redmi K40 Gaming Edition <br />
+              Bruce Lee Special Edition
+            </h5>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>₹17,500</h4>
+          </div>
+          <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+        </div>
+        <div class="pro">
+          <img
+            src="/project/customer/assets/PRODUCT IMG/WATCHB_resized.jpg"
+            alt="Product 3"
+          />
+          <div class="des">
+            <span>Redmi</span>
+            <h5>
+              Redmi K40 Gaming Edition <br />
+              Bruce Lee Special Edition
+            </h5>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>₹17,500</h4>
+          </div>
+          <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+        </div>
+        <div class="pro">
+          <img
+            src="/project/customer/assets/PRODUCT IMG/WATCHB_resized.jpg"
+            alt="Product 3"
+          />
+          <div class="des">
+            <span>Redmi</span>
+            <h5>
+              Redmi K40 Gaming Edition <br />
+              Bruce Lee Special Edition
+            </h5>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>₹17,500</h4>
+          </div>
+          <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+        </div>
+        <div class="pro">
+          <img
+            src="/project/customer/assets/PRODUCT IMG/WATCHB_resized.jpg"
+            alt="Product 3"
+          />
+          <div class="des">
+            <span>Redmi</span>
+            <h5>
+              Redmi K40 Gaming Edition <br />
+              Bruce Lee Special Edition
+            </h5>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>₹17,500</h4>
+          </div>
+          <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+        </div>
+        <!-- Add more product items here -->
+      </div>
+      <button class="scroll-btn scroll-right">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </section>
+
+    <!-- footer -->
+    <footer class="section-p1">
+      <div class="row">
+        <div class="col">
+          <img src="/project/customer/assets/logo/2.png" class="logo" />
+          <h4>Contact</h4>
+          <p>
+            <strong>Address:</strong>G/3 Vihak Park-2,Nr Shree Ram Sweets,<br />
+            Maheshwari Nagar Road, Odhav, Ahemdabad-382415
+          </p>
+          <p><strong>Phone:</strong> (+91)9974311445 / (+91)9974311447</p>
+          <p><strong>Hours:</strong> 10:00am - 8:00pm, Mon-Sat</p>
+          <div class="follow">
+            <h4>Follow Us</h4>
+            <div class="icon">
+              <i class="fab fa-facebook-f"></i>
+              <i class="fab fa-twitter"></i>
+              <i class="fab fa-instagram"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <h4>About</h4>
+          <a href="about.html">About Us</a>
+          <a href="privacyp.html">Privacy Policy</a>
+          <a href="tc.html">Terms And Conditions</a>
+          <a href="contact.html">Contact Us</a>
+          <a href="complaintf.html">Complaint & Feedback</a>
+        </div>
+
+        <div class="col">
+          <h4>My Account</h4>
+          <a href="login.html">Sign In</a>
+          <a href="cart.html">View Cart</a>
+          <a href="help.html">Help</a>
+        </div>
+
+        <div class="col install">
+          <h4>Install Apps</h4>
+          <p>From App Store Or Google Play</p>
+          <div class="row">
+            <img src="/project/customer/assets/pay/app.jpg" />
+            <img src="/project/customer/assets/pay/play.jpg" />
+          </div>
+          <p>We Promise You Secured Payment</p>
+        </div>
+      </div>
+      <p class="copy">&copy; 2025 NILKANTH MOBILES</p>
+    </footer>
+
+    <script type="text/javascript">
+      let currentIndex = 0; // Keeps track of which set of products we're showing
+      const products = document.querySelectorAll(".pro"); // Get all product cards
+      const productsPerScroll = 3; // Number of products to show at once
+
+      function showProducts(index) {
+        // Hide all products initially
+        products.forEach((product) => {
+          product.style.display = "none";
+        });
+
+        // Show products for the current index range
+        for (
+          let i = index;
+          i < index + productsPerScroll && i < products.length;
+          i++
+        ) {
+          products[i].style.display = "block";
+        }
+      }
+
+      document.querySelector(".scroll-left").addEventListener("click", () => {
+        if (currentIndex > 0) {
+          currentIndex -= productsPerScroll; // Move left by 3 products
+        } else {
+          currentIndex = 0; // Ensure the left scroll doesn't go past the first product
+        }
+        showProducts(currentIndex);
+      });
+
+      document.querySelector(".scroll-right").addEventListener("click", () => {
+        if (currentIndex + productsPerScroll < products.length) {
+          currentIndex += productsPerScroll; // Move right by 3 products
+        } else {
+          currentIndex =
+            Math.floor(products.length / productsPerScroll) * productsPerScroll; // Avoid going beyond the last product group
+        }
+        showProducts(currentIndex); // Update the visible products
+      });
+      // Initialize by showing the first set of products
+      showProducts(currentIndex);
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/project/customer/script/script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

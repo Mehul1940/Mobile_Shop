@@ -1,0 +1,38 @@
+/* Payment Table Styles */
+.payment-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 20px;
+}
+
+.card-header {
+    background-color: navy;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px 8px 0 0;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+.payment-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.payment-table th,
+.payment-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #02020250;
+}
+
+.payment-table thead {
+    background-color: #220d8b;
+}
+
+.payment-table tbody tr:hover {
+    background: #f8f9fa;
+}
